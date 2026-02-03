@@ -8,7 +8,7 @@ class CalculadoraBinaria:
             self.__a = a
             return self.__a
         else:
-            raise TypeError("Tipo incorrecto. Só se admiten int, float, complex")
+            raise TypeError("Tipo incorrecto. Só se admiten int, float e complex")
 
     def setB(self, b):
         if isinstance(b, int) or isinstance(b, float) or isinstance(b, complex):
@@ -39,7 +39,7 @@ class CalculadoraBinaria:
         elif op == '/':
             return self.__a / self.__b
         else:
-            raise ValueError("Operador non valiido")
+            raise ValueError("Operador non valido")
 
     a = property (getA, setA)
     b = property (getB, setB)
@@ -56,6 +56,6 @@ if __name__ == '__main__':
         print("Non se pode dividir por cero")
         b = c2.b
         while b == 0:
-            b = int(input("Introduze un divisor: "))
+            b = int(input("Introduce un divisor: "))
         c2.b = b
         print(c2.operacion('/'))
